@@ -1,0 +1,94 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/app_color</item>
+        <item name="colorPrimaryDark">@color/app_color</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary" tools:ignore="NewApi">@color/blue_color</item>
+        <item name="colorPrimaryDark" tools:ignore="NewApi">@color/blue_color</item>
+        <item name="colorAccent" tools:ignore="NewApi">@color/blue_color</item>
+        <item name="colorControlNormal" tools:ignore="NewApi">@color/grey_divider</item>
+        <item name="colorControlActivated" tools:ignore="NewApi">@color/blue_color</item>
+        <item name="colorControlHighlight" tools:ignore="NewApi">@color/blue_color</item>
+    </style>
+
+    <style name="FullscreenDialogAnimation">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
+
+    <style name="FullscreenDialog" parent="android:Theme.Dialog">
+        <item name="android:colorAccent" tools:ignore="NewApi">@color/app_color</item>
+        <item name="android:colorPrimaryDark" tools:ignore="NewApi">@color/app_color</item>
+        <item name="android:colorControlNormal" tools:ignore="NewApi">@color/grey_divider</item>
+        <item name="android:colorControlActivated" tools:ignore="NewApi">@color/app_color</item>
+        <item name="android:colorControlHighlight" tools:ignore="NewApi">@color/app_color</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">#009df7</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustNothing</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:colorForeground">@color/transparent_dialog</item>
+        <item name="android:windowAnimationStyle">@style/FullscreenDialogAnimation</item>
+    </style>
+
+    <style name="FullscreenDialogEditDebt" >
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="edt_sign_up">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:background">@drawable/border_white_corner_blue_text</item>
+        <item name="android:padding">@dimen/small_10dp</item>
+        <item name="android:layout_marginTop">@dimen/small_10dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+    </style>
+
+    <style name="input_edt_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/small_10dp</item>
+        <item name="android:layout_marginEnd">@dimen/small_10dp</item>
+        <item name="android:layout_marginTop">@dimen/small_4dp</item>
+        <item name="android:layout_marginBottom">@dimen/small_4dp</item>
+    </style>
+
+    <style name="common_text_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/black_color</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+    </style>
+
+    <style name="btnDelete">
+        <item name="android:layout_height">@dimen/icon_default_size</item>
+        <item name="android:layout_width">@dimen/icon_default_size</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:src">@drawable/bg_btn_delete</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="btnEdit">
+        <item name="android:layout_height">@dimen/icon_default_size</item>
+        <item name="android:layout_width">@dimen/icon_default_size</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:src">@drawable/bg_btn_edit</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+</resources>

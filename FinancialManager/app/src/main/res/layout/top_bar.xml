@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/app_color"
+    android:gravity="center_vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ln_left"
+        android:layout_width="65dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|start">
+
+        <ImageView
+            android:id="@+id/imv_left"
+            android:layout_width="@dimen/icon_default_size"
+            android:layout_height="@dimen/icon_default_size"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/small_14dp"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_back_white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_title_top_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_24sp" />
+
+    <ImageView
+        android:id="@+id/iv_right_top_bar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="@dimen/small_8dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_right_top_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:padding="@dimen/small_8dp"
+        android:text="@string/save"
+        android:textColor="@color/white_color"
+        android:textSize="20sp"
+        android:visibility="gone" />
+</FrameLayout>
