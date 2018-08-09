@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -84,17 +85,9 @@
             android:paddingStart="@dimen/small_8dp"
             android:paddingTop="@dimen/small_8dp"
             android:scrollbars="vertical"
-            android:textSize="@dimen/default_text_size" />
+            android:textSize="@dimen/default_text_size"
+            tools:ignore="NestedWeights" />
     </LinearLayout>
-
-    <ImageView
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="@dimen/large"
-        android:contentDescription="@null"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_camera" />
 
     <TextView
         android:id="@+id/tv_finish"

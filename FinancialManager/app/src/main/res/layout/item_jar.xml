@@ -8,7 +8,7 @@
         android:id="@+id/iv_jar"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:src="@drawable/ic_jar"
+        android:src="@drawable/icon_jar_money"
         android:scaleType="fitCenter"
         android:backgroundTint="@color/white_color"
         android:contentDescription="@null"/>

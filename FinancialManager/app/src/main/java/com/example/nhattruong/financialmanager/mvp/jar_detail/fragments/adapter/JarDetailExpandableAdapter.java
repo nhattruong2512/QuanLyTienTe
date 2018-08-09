@@ -150,7 +150,8 @@ public class JarDetailExpandableAdapter extends BaseExpandableListAdapter {
             tvDetail.setText(dto.getDetail());
             tvAmount.setText(mContext.getString(R.string.currency_VND, String.valueOf((int)dto.getAmount())));
 //            ivDelete.setVisibility(dto instanceof SpendingDTO ? View.VISIBLE : View.INVISIBLE);
-            itemView.setBackgroundResource((i1 < mItems.get(i).getList().size() - 1) ? R.drawable.bg_white_grey_bottom : R.color.white_color);
+            itemView.setBackgroundResource(R.color.transparent);
+            itemView.setBackgroundResource((i1 < mItems.get(i).getList().size() - 1) ? R.drawable.bg_white_grey_bottom : R.color.transparent);
             ivDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -200,7 +201,8 @@ public class JarDetailExpandableAdapter extends BaseExpandableListAdapter {
             tvState.setText(dto.getState());
             rdPositive.setChecked(dto.isPositive());
             rdNegative.setChecked(!dto.isPositive());
-            itemView.setBackgroundResource((i1 < mItems.get(i).getList().size() - 1)? R.drawable.bg_white_grey_bottom : R.color.white_color);
+//            itemView.setBackgroundResource((i1 < mItems.get(i).getList().size() - 1)? R.drawable.bg_white_grey_bottom : R.color.transparent);
+            itemView.setBackgroundResource(R.color.transparent);
 
             ivEdit.setOnClickListener(new View.OnClickListener() {
                 @Override
