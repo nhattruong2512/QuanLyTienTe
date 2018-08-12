@@ -102,6 +102,16 @@ public class LoginActivity extends BaseActivity implements LoginContract.View, V
     @Override
     public void onClick(View view) {
         if (view == btnLogin) {
+            if (edtUsername.getText().toString().trim().isEmpty()){
+                showOkDialog("","Please input username", null);
+                edtUsername.hasFocus();
+                return;
+            }
+            if (edtPassword.getText().toString().trim().isEmpty()){
+                showOkDialog("","Please input password", null);
+                edtPassword.hasFocus();
+                return;
+            }
             getPresenter().login(edtUsername.getText().toString().trim(), edtPassword.getText().toString().trim());
         } else if (view == btnSignUp) {
             Intent intent = new Intent(this, SignUpActivity.class);
@@ -118,7 +128,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.View, V
 
     @Override
     public void onFailure(String error) {
-        showErrorDialog(error);
+        showErrorDialog(getString(R.string.login_failed));
     }
 
     @Override

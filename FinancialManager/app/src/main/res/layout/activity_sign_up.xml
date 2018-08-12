@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white_color"
+    android:background="@drawable/bg_navigation"
     android:orientation="vertical"
     tools:context="com.example.nhattruong.financialmanager.mvp.signup.SignUpActivity">
 
@@ -79,7 +79,7 @@
             android:imeOptions="actionNext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="phone"
+            android:inputType="number"
             android:hint="@string/phone"/>
     </android.support.design.widget.TextInputLayout>
 
@@ -114,10 +114,10 @@
         android:layout_marginTop="@dimen/large_32dp"
         android:background="@drawable/border_btn_blue_grey"
         android:text="@string/sign_up"
-        android:paddingTop="@dimen/small_8dp"
-        android:paddingStart="@dimen/large_32dp"
-        android:paddingBottom="@dimen/small_8dp"
-        android:paddingEnd="@dimen/large_32dp"
+        android:paddingTop="10dp"
+        android:paddingStart="64dp"
+        android:paddingBottom="10dp"
+        android:paddingEnd="64dp"
         android:textAllCaps="false"
         android:layout_gravity="center"
         android:textColor="@color/color_grey_white_text" />

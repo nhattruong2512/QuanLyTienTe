@@ -102,4 +102,6 @@
     <string name="not_submit">Not submit</string>
     <string name="todo">Todo</string>
     <string name="create">Create</string>
+    <string name="login_failed">Login Failed!</string>
+    <string name="sign_up_failed">Sign up failed!</string>
 </resources>

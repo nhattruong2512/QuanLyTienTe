@@ -12,12 +12,7 @@ import butterknife.Unbinder;
 
 public class JarDetailPresenter extends BasePresenter implements JarDetailContract.Presenter {
 
-    private List<TabHeader> mListTabHeader;
     private Date dateStart, dateEnd;
-
-    public List<TabHeader> getListTabHeader() {
-        return mListTabHeader;
-    }
 
     public Date getDateStart() {
         return dateStart;
@@ -43,7 +38,6 @@ public class JarDetailPresenter extends BasePresenter implements JarDetailContra
     @Override
     public void onCreate(IBaseView view, Unbinder binder) {
         super.onCreate(view, binder);
-        mListTabHeader = getResourcesManager().getListTabHeaderJarDetail();
     }
 
     @Override

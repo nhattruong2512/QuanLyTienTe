@@ -174,6 +174,6 @@ public class SignUpActivity extends BaseActivity implements SignUpContract.View 
 
     @Override
     public void onFailure(RestError error) {
-        showErrorDialog(error.message);
+        showErrorDialog(getString(R.string.sign_up_failed));
     }
 }
