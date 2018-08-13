@@ -379,7 +379,7 @@ public class CreateActivity extends BaseActivity implements View.OnClickListener
 
     @Override
     public void onFailure(RestError error) {
-        showErrorDialog(error.message);
+        showErrorDialog(getString(R.string.spending_not_lager_income));
     }
 
     @Override

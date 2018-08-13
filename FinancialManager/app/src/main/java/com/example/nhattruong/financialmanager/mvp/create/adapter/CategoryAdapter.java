@@ -21,7 +21,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     private List<Jar> items;
     private Context context;
     private OnItemClickedListener mCallback;
-    private int currentSelected = -1;
+    private int currentSelected = 0;
 
     public CategoryAdapter(Context context, List<Jar> items, OnItemClickedListener callback) {
         this.items = items;

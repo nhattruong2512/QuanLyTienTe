@@ -47,6 +47,7 @@ public class CreatePresenter extends BasePresenter implements CreateContract.Pre
                 if (res.result != null && !res.result.isEmpty()) {
                     getJarList().clear();
                     mJarList.addAll(res.result);
+                    setJarId(mJarList.get(0).getId());
                 }
                 getView().getAllJarSuccess();
             }
