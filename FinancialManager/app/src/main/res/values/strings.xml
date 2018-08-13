@@ -86,7 +86,7 @@
     <string name="ready">Ready</string>
     <string name="done2">Done</string>
 
-    <string name="waiting2">Đã trả</string>
+    <string name="waiting2">Đợi trả</string>
     <string name="ready2">Sẵn sàng trả</string>
     <string name="done3">Đã trả</string>
 
@@ -119,4 +119,8 @@
     <string name="next">Tiếp theo</string>
     <string name="choose_category">Chọn mục</string>
     <string name="detail3">Chi tiết</string>
+    <string name="logout2">Bạn có chắc đăng xuất không?</string>
+    <string name="confirm_delete_todo">Bạn có chắc muốn xóa công việc này?</string>
+    <string name="todo_list">Danh sách dự định</string>
+    <string name="confirm_delete_debt">Bạn có chắc xóa nợ này?</string>
 </resources>

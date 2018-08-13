@@ -198,7 +198,16 @@ public class JarDetailExpandableAdapter extends BaseExpandableListAdapter {
             tvDetail.setText(dto.getDetail());
             tvAmount.setText(mContext.getString(R.string.currency_VND, String.valueOf((int)dto.getAmount())));
             tvOrigin.setText(dto.getOrigin());
-            tvState.setText(dto.getState());
+            if (dto.getState().equals(mContext.getString(R.string.waiting))){
+                tvState.setText(mContext.getString(R.string.waiting2));
+            }
+            if (dto.getState().equals(mContext.getString(R.string.ready))){
+                tvState.setText(mContext.getString(R.string.ready2));
+            }
+            if (dto.getState().equals(mContext.getString(R.string.done2))){
+                tvState.setText(mContext.getString(R.string.done3));
+            }
+//            tvState.setText(dto.getState());
             rdPositive.setChecked(dto.isPositive());
             rdNegative.setChecked(!dto.isPositive());
 //            itemView.setBackgroundResource((i1 < mItems.get(i).getList().size() - 1)? R.drawable.bg_white_grey_bottom : R.color.transparent);

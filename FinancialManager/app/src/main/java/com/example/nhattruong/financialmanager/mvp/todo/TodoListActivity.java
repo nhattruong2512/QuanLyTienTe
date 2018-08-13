@@ -53,14 +53,14 @@ public class TodoListActivity extends BaseActivity implements TodoListContract.V
     }
 
     private void initData() {
-        tvTitle.setText("Todo list");
+        tvTitle.setText(R.string.todo_list);
         ivRight.setImageDrawable(getDrawable(R.drawable.ic_add_transparent));
         ivRight.setVisibility(View.VISIBLE);
 
         adapter = new TodoAdapter(this, getPresenter().getTodoList(), new TodoAdapter.Listener() {
             @Override
             public void onDeleted(final int position) {
-                showConfirmDialog("", "Are you sure to delete this?", new DialogPositiveNegative.IPositiveNegativeDialogListener() {
+                showConfirmDialog("", getString(R.string.confirm_delete_todo), new DialogPositiveNegative.IPositiveNegativeDialogListener() {
                     @Override
                     public void onIPositiveNegativeDialogAnswerPositive(DialogPositiveNegative dialog) {
                         getPresenter().remove(position);

@@ -86,7 +86,7 @@ public class DebtFragment extends BaseJarDetailFragment implements DebtContract.
             @Override
             public void onDeleteClicked(final int positionGroup, final int positionChild) {
                 //delete debt
-                showConfirmDialog("Are you sure to delete this?", new DialogPositiveNegative.IPositiveNegativeDialogListener() {
+                showConfirmDialog(getString(R.string.confirm_delete_debt), new DialogPositiveNegative.IPositiveNegativeDialogListener() {
                     @Override
                     public void onIPositiveNegativeDialogAnswerPositive(DialogPositiveNegative dialog) {
                         getPresenter().deleteDebt(positionGroup, positionChild);

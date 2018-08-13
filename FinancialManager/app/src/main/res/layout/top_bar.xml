@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textColor="@color/white_color"
-        android:textSize="@dimen/text_24sp" />
+        android:textSize="20sp" />
 
     <ImageView
         android:id="@+id/iv_right_top_bar"

@@ -190,7 +190,7 @@ public class HomeActivity extends BaseActivity implements HomeContract.View, Vie
         tvLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showConfirmDialog("Are you sure to logout?", new DialogPositiveNegative.IPositiveNegativeDialogListener() {
+                showConfirmDialog(getString(R.string.logout2), new DialogPositiveNegative.IPositiveNegativeDialogListener() {
                     @Override
                     public void onIPositiveNegativeDialogAnswerPositive(DialogPositiveNegative dialog) {
                         dialog.dismiss();

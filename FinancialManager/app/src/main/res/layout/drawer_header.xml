@@ -24,7 +24,7 @@
             android:src="@drawable/ic_circle_currency"/>
 
         <TextView
-            android:text="Financial Manager"
+            android:text="@string/app_name"
             android:id="@+id/menu_tv_name_company"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

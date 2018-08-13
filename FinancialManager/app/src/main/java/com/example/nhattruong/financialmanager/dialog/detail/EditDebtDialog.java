@@ -55,7 +55,7 @@ public class EditDebtDialog extends Dialog implements View.OnClickListener, DayM
     TextInputLayout edtAmount;
 
     @BindView(R.id.edt_edit_origin)
-    TextInputLayout edtOrigin;
+    TextInputLayout emDebtrigin;
 
     @BindView(R.id.tv_state_display)
     TextView tvStateDisplay;
@@ -76,13 +76,22 @@ public class EditDebtDialog extends Dialog implements View.OnClickListener, DayM
     private List<String> mStatus;
 
     private Debt getDebtChanged(){
+        String state = tvStateDisplay.getText().toString();
+        if (state.equals(getContext().getString(R.string.waiting2))){
+            state = getContext().getString(R.string.waiting);
+        }
+        else if (state.equals(getContext().getString(R.string.ready2))){
+            state = getContext().getString(R.string.ready);
+        }else {
+            state = getContext().getString(R.string.done2);
+        }
         return new Debt.DebtBuilder()
                 .setId(mDebt.getId())
                 .setDate(currentDate)
                 .setDetail(edtDetail.getEditText().getText().toString())
                 .setAmount(Double.parseDouble(edtAmount.getEditText().getText().toString()))
-                .setOrigin(edtOrigin.getEditText().getText().toString())
-                .setState(tvStateDisplay.getText().toString())
+                .setOrigin(emDebtrigin.getEditText().getText().toString())
+                .setState(state)
                 .setPositive(rdPositive.isChecked())
                 .build();
     }
@@ -127,16 +136,25 @@ public class EditDebtDialog extends Dialog implements View.OnClickListener, DayM
         tvDate.setText(DateUtils.formatFullDatePeriods(currentDate));
         edtDetail.getEditText().setText(mDebt.getDetail());
         edtAmount.getEditText().setText(String.valueOf(mDebt.getAmount()));
-        edtOrigin.getEditText().setText(mDebt.getOrigin());
-        tvStateDisplay.setText(mDebt.getState());
+        if (mDebt.getState().equals(getContext().getString(R.string.waiting))){
+            tvStateDisplay.setText(getContext().getString(R.string.waiting2));
+        }
+        if (mDebt.getState().equals(getContext().getString(R.string.ready))){
+            tvStateDisplay.setText(getContext().getString(R.string.ready2));
+        }
+        if (mDebt.getState().equals(getContext().getString(R.string.done2))){
+            tvStateDisplay.setText(getContext().getString(R.string.done3));
+        }
+//        tvStateDisplay.setText(mDebt.getState());
+        emDebtrigin.getEditText().setText(mDebt.getOrigin());
         rdNegative.setChecked(!mDebt.isPositive());
         rdPositive.setChecked(mDebt.isPositive());
         tvSave.setVisibility(View.VISIBLE);
 
         adapter = new SpinnerStateAdapter(getContext(), Arrays.asList(getContext().getResources().getStringArray(R.array.list_state_debt2)), new SpinnerStateAdapter.ISpinnerCallback() {
             @Override
-            public void onItemSelected(int position) {
-                tvStateDisplay.setText(mStatus.get(position));
+            public void onItemSelected(String state) {
+                tvStateDisplay.setText(state);
                 hideSpinnerDropDown();
             }
         });

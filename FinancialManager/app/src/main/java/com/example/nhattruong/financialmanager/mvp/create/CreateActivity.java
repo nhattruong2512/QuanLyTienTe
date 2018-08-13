@@ -132,10 +132,11 @@ public class CreateActivity extends BaseActivity implements View.OnClickListener
         mType = getIntent().getIntExtra(CREATE_TYPE, 0);
 
         tvDisplayState.setText(getString(R.string.ready2));
-        spinnerStateAdapter = new SpinnerStateAdapter(this, Arrays.asList(getResources().getStringArray(R.array.list_state_debt2)), new SpinnerStateAdapter.ISpinnerCallback() {
+        spinnerStateAdapter = new SpinnerStateAdapter(this, Arrays.asList(getResources().getStringArray(R.array.list_state_debt2)),
+                new SpinnerStateAdapter.ISpinnerCallback() {
             @Override
-            public void onItemSelected(int position) {
-                tvDisplayState.setText(mStatus.get(position));
+            public void onItemSelected(String state) {
+                tvDisplayState.setText(state);
                 hideSpinnerDropDown();
             }
         });
@@ -354,6 +355,14 @@ public class CreateActivity extends BaseActivity implements View.OnClickListener
             case AppConstants.CREATE_DEBT:
                 String origin = edtOrigin.getEditText().getText().toString();
                 String state = tvDisplayState.getText().toString();
+                if (state.equals(getString(R.string.waiting2))){
+                    state = getString(R.string.waiting);
+                }
+                else if (state.equals(getString(R.string.ready2))){
+                    state = getString(R.string.ready);
+                }else {
+                    state = getString(R.string.done2);
+                }
                 boolean isPositive = rdPositive.isChecked();
                 getPresenter().createDebt(date, note, Double.parseDouble(tvCurrency.getText().toString()), origin, state, isPositive);
                 break;
