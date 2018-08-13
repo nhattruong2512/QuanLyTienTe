@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Select photo"
+            android:text="@string/select_photo"
             android:textColor="@color/app_color"
             android:textSize="18sp" />
     </LinearLayout>
@@ -177,6 +177,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_gravity="center"
             android:text="@string/phone" />
 
         <EditText

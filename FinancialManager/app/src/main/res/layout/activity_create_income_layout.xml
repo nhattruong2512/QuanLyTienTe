@@ -89,7 +89,7 @@
                 android:gravity="center"
                 android:paddingBottom="@dimen/small_14dp"
                 android:paddingTop="@dimen/small_14dp"
-                android:text="Next"
+                android:text="@string/next"
                 android:textColor="@color/black_color" />
         </LinearLayout>
 
@@ -107,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/small_8dp"
-                android:text="Choose category"
+                android:text="@string/choose_category"
                 android:textAllCaps="true"
                 android:textColor="#000000"
                 android:textSize="20sp" />
@@ -127,7 +127,7 @@
                 android:gravity="center"
                 android:paddingBottom="@dimen/small_14dp"
                 android:paddingTop="@dimen/small_14dp"
-                android:text="Details"
+                android:text="@string/detail3"
                 android:textColor="@color/black_color" />
 
 
@@ -148,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/small_8dp"
-                android:text="State"
+                android:text="@string/state"
                 android:textAllCaps="true"
                 android:textColor="#000000"
                 android:textSize="20sp" />
@@ -244,7 +244,7 @@
                 android:gravity="center"
                 android:paddingBottom="@dimen/small_14dp"
                 android:paddingTop="@dimen/small_14dp"
-                android:text="Next"
+                android:text="@string/next"
                 android:textColor="@color/black_color" />
 
         </LinearLayout>
@@ -263,7 +263,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/small_8dp"
-                android:text="Details"
+                android:text="@string/detail3"
                 android:textAllCaps="true"
                 android:textColor="#000000"
                 android:textSize="16sp"
@@ -284,7 +284,7 @@
                 android:gravity="center"
                 android:paddingBottom="@dimen/small_10dp"
                 android:paddingTop="@dimen/small_10dp"
-                android:text="Finish"
+                android:text="@string/finish"
                 android:textColor="@color/white_color"
                 android:visibility="gone"/>
         </LinearLayout>

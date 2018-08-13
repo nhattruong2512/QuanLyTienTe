@@ -80,6 +80,9 @@ public class HomeActivity extends BaseActivity implements HomeContract.View, Vie
     @BindView(R.id.fab_debt)
     FloatingActionButton fabDebt;
 
+    @BindView(R.id.fab_general)
+    FloatingActionButton fabGeneral;
+
     private JarAdapter mJarAdapter;
     private boolean isCreateTodo = false;
 
@@ -136,6 +139,7 @@ public class HomeActivity extends BaseActivity implements HomeContract.View, Vie
         fabIncome.setOnClickListener(this);
         fabSpending.setOnClickListener(this);
         fabDebt.setOnClickListener(this);
+        fabGeneral.setOnClickListener(this);
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -259,6 +263,9 @@ public class HomeActivity extends BaseActivity implements HomeContract.View, Vie
                 intentCreate.putExtra(CreateActivity.CREATE_TYPE, AppConstants.CREATE_SPENDING);
             } else if (view == fabDebt){
                 intentCreate.putExtra(CreateActivity.CREATE_TYPE, AppConstants.CREATE_DEBT);
+            }else if (view == fabGeneral)
+            {
+                intentCreate.putExtra(CreateActivity.CREATE_TYPE, AppConstants.CREATE_GENERAL);
             }
             startActivityForResult(intentCreate, AppConstants.REQUEST_CODE_CREATE);
             fabAdd.close(true);

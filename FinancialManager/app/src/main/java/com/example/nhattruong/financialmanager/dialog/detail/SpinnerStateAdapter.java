@@ -59,13 +59,13 @@ public class SpinnerStateAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 if (mCallback != null && mSelectedPosition != i)
-                    mCallback.onItemSelected(mItems.get(i));
+                    mCallback.onItemSelected(i);
             }
         });
         return view;
     }
 
     public interface ISpinnerCallback{
-        void onItemSelected(String state);
+        void onItemSelected(int position);
     }
 }

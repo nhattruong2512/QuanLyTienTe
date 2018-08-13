@@ -108,6 +108,7 @@ public class CreateActivity extends BaseActivity implements View.OnClickListener
     private SpinnerStateAdapter spinnerStateAdapter;
     private CategoryAdapter categoryAdapter;
     private int mType;
+    private List<String> mStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,13 +127,15 @@ public class CreateActivity extends BaseActivity implements View.OnClickListener
 
     private void initData() {
 
+        mStatus = Arrays.asList(getResources().getStringArray(R.array.list_state_debt));
+
         mType = getIntent().getIntExtra(CREATE_TYPE, 0);
 
-        tvDisplayState.setText(getString(R.string.ready));
-        spinnerStateAdapter = new SpinnerStateAdapter(this, Arrays.asList(getResources().getStringArray(R.array.list_state_debt)), new SpinnerStateAdapter.ISpinnerCallback() {
+        tvDisplayState.setText(getString(R.string.ready2));
+        spinnerStateAdapter = new SpinnerStateAdapter(this, Arrays.asList(getResources().getStringArray(R.array.list_state_debt2)), new SpinnerStateAdapter.ISpinnerCallback() {
             @Override
-            public void onItemSelected(String state) {
-                tvDisplayState.setText(state);
+            public void onItemSelected(int position) {
+                tvDisplayState.setText(mStatus.get(position));
                 hideSpinnerDropDown();
             }
         });

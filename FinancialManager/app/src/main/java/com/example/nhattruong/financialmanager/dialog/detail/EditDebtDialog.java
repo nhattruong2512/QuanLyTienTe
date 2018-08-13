@@ -26,6 +26,7 @@ import com.example.nhattruong.financialmanager.utils.DateUtils;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -72,6 +73,7 @@ public class EditDebtDialog extends Dialog implements View.OnClickListener, DayM
     private IJarDetail mDebt;
     private Date currentDate;
     private OnEditDebtListener mCallback;
+    private List<String> mStatus;
 
     private Debt getDebtChanged(){
         return new Debt.DebtBuilder()
@@ -119,6 +121,8 @@ public class EditDebtDialog extends Dialog implements View.OnClickListener, DayM
 
 
     private void initData() {
+        mStatus = Arrays.asList(getContext().getResources().getStringArray(R.array.list_state_debt));
+
         tvTitle.setText(R.string.edit_debt);
         tvDate.setText(DateUtils.formatFullDatePeriods(currentDate));
         edtDetail.getEditText().setText(mDebt.getDetail());
@@ -129,10 +133,10 @@ public class EditDebtDialog extends Dialog implements View.OnClickListener, DayM
         rdPositive.setChecked(mDebt.isPositive());
         tvSave.setVisibility(View.VISIBLE);
 
-        adapter = new SpinnerStateAdapter(getContext(), Arrays.asList(getContext().getResources().getStringArray(R.array.list_state_debt)), new SpinnerStateAdapter.ISpinnerCallback() {
+        adapter = new SpinnerStateAdapter(getContext(), Arrays.asList(getContext().getResources().getStringArray(R.array.list_state_debt2)), new SpinnerStateAdapter.ISpinnerCallback() {
             @Override
-            public void onItemSelected(String state) {
-                tvStateDisplay.setText(state);
+            public void onItemSelected(int position) {
+                tvStateDisplay.setText(mStatus.get(position));
                 hideSpinnerDropDown();
             }
         });
