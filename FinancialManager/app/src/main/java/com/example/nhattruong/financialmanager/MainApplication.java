@@ -28,6 +28,7 @@ public class MainApplication extends Application {
         }
         getAppComponent().inject(this);
 
+        // Test
     }
 
     public static ApplicationComponent getAppComponent() {
